@@ -78,4 +78,29 @@ app.put("/tasks/:id", (req, res) => {
     });
 });
 
+app.delete('/tasks/:id', (req, res) => {
+  let id = req.params.id;
+  let body = req.body;
+  Task.findByIdAndRemove(id, (err, taskDB) => {
+    if(err){
+      return res.json({
+        ok: false,
+        err
+      });
+    }
+    if (!taskDB) {
+      return res.json({
+        ok: false,
+        err:{
+          message: 'Esta tarea no existe'
+        }
+      });
+    }
+    res.json({
+      ok: true,
+      message: 'Tarea borrada'
+    });
+  });
+});
+
 module.exports = app;
