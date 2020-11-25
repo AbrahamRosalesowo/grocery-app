@@ -4,8 +4,7 @@ class Header extends React.Component{
 render(){
     return(
         <header className="header">
-            <h1>ToDo App</h1>
-            <h2 className="tab">List of Tasks</h2>
+            <h1>Grocery Bud App</h1>
         </header>
     );
 }

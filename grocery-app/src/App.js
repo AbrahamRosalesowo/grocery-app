@@ -3,14 +3,15 @@ import React from "react";
 
 import Header from './components/Header';
 import TaskList from './components/TaskList';
-//import {} from './components/Options';
+import Options from "./components/Options";
 
 function App() {
   return (
-    <>
+    <main className="main">
   <Header />
   <TaskList />
-    </>
+  <Options />
+    </main>
   );
 }
 
