@@ -18,6 +18,11 @@
   border-bottom: 4px solid #65b4e9;
   color: #65b4e9;
 }
+.content {
+  overflow: auto;
+  height: 400px;
+  width: 100%;
+}
 .list-item {
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -54,11 +59,6 @@
 input.checkbox {
   width: 30px;
   height: 30px;
-}
-.content {
-  overflow: auto;
-  height: 400px;
-  width: 100%;
 }
 
 .trash {
