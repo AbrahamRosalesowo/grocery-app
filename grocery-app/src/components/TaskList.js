@@ -22,7 +22,7 @@ class TaskList extends React.Component {
     return (
       <>
         <div className="content">
-          <h2 className="tab">Shopping list</h2>
+    <h2 className="tab">Items: { this.state.tasks.length }</h2>
           {this.state.tasks.map((tarea) => (
             <div className="list-item" key={tarea._id} >
               <div className="item-elements">
