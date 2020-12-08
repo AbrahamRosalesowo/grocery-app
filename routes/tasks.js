@@ -20,6 +20,30 @@ app.get("/tasks", (req, res) => {
   });
 });
 
+app.get('/tasks/:id', (req, res) => {
+  let id = req.params.id;
+  Task.findById(id, (err, taskDB) => {
+    if(err){
+      return res.status(500).json({
+        ok: false,
+        err
+      });
+    }
+    if(!taskDB){
+      return res.status(400).json({
+        ok: false,
+        err:{
+          message: 'no se encuentra el ID'
+        }
+      });
+    }
+    res.json({
+      ok: true,
+      Task: taskDB
+    });
+  });
+});
+
 app.post("/tasks", function (req, res) {
   let body = req.body;
   let date = new Date().getTime();
