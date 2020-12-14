@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  padding: 20px;
+  background-color: #5793bb;
+}
+.header > h1 {
+  color: #ffffff;
+}
+.tab {
+  padding: 20px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #65b4e9;
+  color: #65b4e9;
+}
+.content {
+  overflow: auto;
+  height: 400px;
+  width: 100%;
+}
+.list-item {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px;
+  background-color: #d9d9d9;
+}
+
+.item-elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.options {
+  font-size: 50px;
+  color: #5793bb;
+  padding: 10px;
+}
+
+.item-options {
+  padding: 10px 0px;
+  display: block;
+  font-size: 25px;
+}
+.btn-post{
+  border: none;
+  color: #65b4e9;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.plus{
+  font-size: 60px;
+}
+.plus:hover {
+  opacity: .8;
+}
+
+input.checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.trash {
+  color: #353535;
+}
+.trash:hover{
+  color: #da2a2a;
+  cursor: pointer;
+}
+.edit{
+  color: #353535;
+}
+.edit:hover{
+  color: #5acfb6;
+  cursor: pointer;
+}
