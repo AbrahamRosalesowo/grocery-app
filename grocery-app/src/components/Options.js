@@ -2,33 +2,45 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 
-const Options = () => {
-  /*const createTask = () => {
-    axios
-      .get("https://todo-appu.herokuapp.com/tasks/:id")
-      .then((res) => {
-        const tasks = res.data.tasks;
-        const id = res.data.tasks.tarea.id;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-*/
+// Router
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-  function createTask() {
-    alert("Crear tarea");
-  }
+const Options = () => {
+
 
   return (
     <footer className="options">
-      <button className="btn-post">
+      <Router>
+        <Link to="/new-item">
         <FontAwesomeIcon
           icon={faPlusSquare}
           className="plus"
-          onClick={createTask}
         />
-      </button>
+  </Link>
+      <Switch>
+      <Route
+       exact path="/new-item" render={
+        (props) => {
+          return(
+            <div className="list-item"> 
+            <div className="item-elements">
+              <form type="submit">
+                <input type="text" placeholder="Item Name"></input>
+                
+                <button>
+                  Add 
+                </button>
+                
+              </form>
+            </div>
+            
+            </div>
+          );
+      }
+      } />
+      
+      </Switch>
+      </Router>
     </footer>
   );
 };
