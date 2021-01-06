@@ -5,7 +5,9 @@ const NewItem = () =>{
         <div className="list-item"> 
         <div className="item-elements">
           <form type="submit">
-            <input type="text" placeholder="Item Name"></input>
+            <input type="text" placeholder="Item Name">
+              
+            </input>
             
             <button>
               Add 

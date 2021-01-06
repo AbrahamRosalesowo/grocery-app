@@ -14,7 +14,7 @@ const Options = () => {
           <FontAwesomeIcon icon={faPlusSquare} className="plus" />
         </Link>
         <Switch>
-          <Route exact path="/new-item" Component={NewItem} />
+          <Route exact path="/new-item" render={NewItem} />
         </Switch>
       </Router>
     </footer>
