@@ -1,18 +1,19 @@
-import "./App.css";
 import './bootstrap.min.css'
 import React from "react";
 
-import Header from './components/Header';
 import TaskList from './components/TaskList';
 import Options from "./components/Options";
 
 function App() {
   return (
-    <main className="main">
-  <Header />
-  <TaskList />
-  <Options />
-    </main>
+    <>
+      <header className="text-white bg-primary p-4">
+        <h1 className="navbar-brand">Grocery Budget Application</h1>
+      </header>
+
+      <TaskList />
+      <Options />
+    </>
   );
 }
 

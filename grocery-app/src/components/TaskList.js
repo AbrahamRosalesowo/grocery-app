@@ -31,26 +31,32 @@ class TaskList extends React.Component {
     };
     return (
       <>
-        <div className="content">
-          <h2 className="tab">Items: {this.state.tasks.length}</h2>
+        <div className="card text-center d-flex  align-items-center">
+          <h3 className="m-4">Remaining Items: {this.state.tasks.length}</h3>
           {this.state.tasks.map((tarea) => (
-            <div className="list-item" key={tarea._id}>
-              <div className="item-elements">
-                <form>
-                  <input
-                    type="checkbox"
-                    className="checkbox"
-                    onClick={taskChecked}
-                    checked={this.state.tasks.tarea}
-                  ></input>
-                </form>
-                <h3>{tarea.tarea}</h3>
+            <div className="card text-white bg-primary mb-2 p-3" style={{width:'500px'}} key={tarea._id}>
+              <div className="container-sm" >
+                <div className="row">
 
-                <FontAwesomeIcon
-                  icon={faTrash}
-                  className="item-options trash"
-                  id={tarea._id}
-                />
+                  <form className="col">
+                    <input
+                      type="checkbox"
+                      className="checkbox" onClick={taskChecked}
+                      checked={this.state.tasks.tarea}
+                    ></input>
+                  </form>
+
+                  <h5 className="col-9 text-center">{tarea.tarea}</h5>
+                  <button type="button"
+                    className="col btn btn-danger"
+                    style={{ width: "10px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      id={tarea._id}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
